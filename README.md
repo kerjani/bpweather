@@ -1,4 +1,4 @@
-# Budapest Weather :sunny: :Cloud:
+# Budapest Weather :sunny: :cloud:
 
 An Android weather application implemented using the MVVM pattern, HiltRetrofit2, LiveData, ViewModel, Coroutines, Room, Navigation Components, Data Binding and some other libraries from the [Modern Android Development](https://developer.android.com/modern-android-development) blueprint. 
 
