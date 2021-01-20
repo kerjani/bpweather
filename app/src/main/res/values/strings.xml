@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Budapest Weather</string>
+    <string name="temperature">%.1f °C</string>
+    <string name="updated">Last updated at %s</string>
+</resources>
