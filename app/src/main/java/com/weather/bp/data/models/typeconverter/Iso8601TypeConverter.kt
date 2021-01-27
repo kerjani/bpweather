@@ -6,7 +6,7 @@ import java.time.format.DateTimeFormatter
 import java.time.temporal.TemporalAccessor
 import java.util.*
 
-class Iso8601TypeConverter {
+class Iso8601TypeConverter { // TODO use joda time -> lower minimum API level will be possible
 
     @TypeConverter
     fun stringToDateTimeInMillis(iso8601Date: String): Long {

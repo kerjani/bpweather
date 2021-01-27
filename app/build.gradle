@@ -114,6 +114,7 @@ dependencies {
     testImplementation "org.mockito:mockito-core:$mockitoVersion"
 
     // AndroidX Test - Instrumented testing
+    androidTestImplementation "androidx.test.ext:junit-ktx:$androidXTestExtKotlinRunnerVersion"
     androidTestImplementation "org.mockito:mockito-core:$mockitoVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
     androidTestImplementation "androidx.arch.core:core-testing:$archTestingVersion"
