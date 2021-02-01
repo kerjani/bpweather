@@ -1,5 +1,7 @@
 # Budapest Weather :sunny: :cloud:
 
+[![BCH compliance](https://bettercodehub.com/edge/badge/kerjani/bpweather?branch=master)](https://bettercodehub.com/)
+
 An Android weather application implemented using the MVVM pattern, HiltRetrofit2, LiveData, ViewModel, Coroutines, Room, Navigation Components, Data Binding and some other libraries from the [Modern Android Development](https://developer.android.com/modern-android-development) blueprint. 
 
 Budapest Weather fetches data from the [MetaWeather API](https://www.metaweather.com/api/) to provide an up to date forecast for the current day. 

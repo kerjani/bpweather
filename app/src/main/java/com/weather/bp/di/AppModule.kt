@@ -54,8 +54,13 @@ object AppModule {
     fun provideApiService(retrofit: Retrofit): ApiService = retrofit.create(ApiService::class.java)
 
     @Provides
-    @Singleton
-    fun providesCoroutineDispatcher(): CoroutineDispatcher = Dispatchers.IO
+    @IoCouroutineDispatcher
+    fun providesIoCoroutineDispatcher(): CoroutineDispatcher = Dispatchers.IO
+
+
+    @Provides
+    @DefaultCouroutineDispatcher
+    fun providesDefaultCoroutineDispatcher(): CoroutineDispatcher = Dispatchers.Default
 
     @Singleton
     @Provides
