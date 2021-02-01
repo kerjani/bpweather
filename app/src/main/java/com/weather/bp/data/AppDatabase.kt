@@ -17,10 +17,19 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun weatherDao(): WeatherDao
 
     companion object {
-        @Volatile private var instance: AppDatabase? = null
+        /**
+         * Volatile forces all accesses (read or write) to the volatile variable to occur to main memory.
+         * Under the JSR 133 memory model, it is still true that volatile variables cannot be reordered with each other.
+         */
+        @Volatile
+        private var instance: AppDatabase? = null
 
         fun getDatabase(context: Context): AppDatabase =
-            instance ?: synchronized(this) { instance ?: buildDatabase(context).also { instance = it } }
+            instance ?: synchronized(this) {
+                instance ?: buildDatabase(context).also {
+                    instance = it
+                }
+            }
 
         private fun buildDatabase(appContext: Context) =
             Room.databaseBuilder(appContext, AppDatabase::class.java, "characters")
